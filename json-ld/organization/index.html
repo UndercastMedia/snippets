@@ -1,0 +1,35 @@
+---
+title: Organization
+description: This is an example of how to mark up an organziation using Jekyll.
+website_name: Executive Anvils
+website_logo_image: placehold.it/274x60
+logo_image_width: 274
+logo_image_height: 60
+support_email: support@example.com
+_comments:
+  website_name: The name of the website.
+  website_logo_image: The URL of the website's logo image file.
+  logo_image_width: The width of the website's logo image file.
+  logo_image_height: The height of the website's logo image file.
+  support_email: Customer support email address.
+---
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "{{ page.website_name }}",
+  "url": "{{ site.url }}",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ page.website_logo_image }}",
+    "width": {{ page.logo_image_width }},
+    "height": {{ page.logo_image_height }}
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "{{ page.support_email }}",
+    "url": "{{ site.url }}"
+  }
+}
+</script>

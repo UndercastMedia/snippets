@@ -1,0 +1,15 @@
+name: Jekyll Code Snippets
+short_name: Snippets
+theme_color: '#2196f3'
+background_color: '#212121'
+icons:
+  192px_by_192px_image: /images/icon_192x192.png
+  256px_by_256px_image: /images/icon_256x265.png
+  384px_by_384px_image: /images/icon_384x384.png
+  512px_by_512px_image: /images/icon_512x512.png
+_comments:
+  name: Name of your web app.
+  short_name: Short name of your web app. (less than 12 characters)
+  theme_color: Color of the toolbar.
+  background_color: Background color used when the web app is launched.
+  icons: Icons used when your web app is launched or added to a home screen. (.png files only)

@@ -1,0 +1,63 @@
+---
+title: Articles
+description: This is an example of how to markup an article using Jekyll so that Google can enhance your appearance in search results.
+headline: Article Headline
+article_thumbnail_image: placehold.it/800x800
+thumbnail_image_width: 800
+thumbnail_image_height: 800
+published_date: 2015-02-05
+modified_date: 2015-02-06
+author: John Doe
+publisher: Google
+publisher_logo_image: placehold.it/600x60
+logo_image_width: 600
+logo_image_height: 60
+article_description: A most wonderful article.
+_comments:
+  headline: The headline of the article. Headlines should not exceed 110 characters.
+  article_thumbnail_image: The representative image of the article.
+  thumbnail_image_width: The height of the image, in pixels.
+  thumbnail_image_height: The width of the image, in pixels.
+  published_date: The date the article was first published.
+  modified_date: The date the article was last modified.
+  author: The author of the article.
+  publisher: The name of the publisher.
+  publisher_logo_image: The URL pointing to the logo of the publisher.
+  logo_image_width: The width of the logo, in pixels.
+  logo_image_height: The height of the logo, in pixels.
+  article_description: A short description of the article.
+---
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://google.com/article"
+  },
+  "headline": "{{ page.headline }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ article_thumbnail_image }}",
+    "height": {{ thumbanil_image_height }},
+    "width": {{ thumbanil_image_width }}
+  },
+  "datePublished": "{{ page.published_date }}T00:00:00+00:00",
+  "dateModified": "{{ page.modified_date }}T00:00:00+00:00",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author }}"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "{{ page.publisher }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ page.publisher_logo_image }}",
+      "width": {{ page.logo_image_width }},
+      "height": {{ page.logo_image_height }}
+    }
+  },
+  "description": "{{ page.article_description }}"
+}
+</script>

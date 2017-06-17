@@ -1,0 +1,28 @@
+---
+title: Business
+description: This is an example of open graph mark up for a business using Jekyll.
+business_name: Executive Anvil
+image: placehold.it/800x800
+street_address: 3986 Rivermark Pkwy
+city: Santa Clara
+state: CA
+postal_code: 95054
+country: US
+_comments:
+  business_name: The name of the business.
+  image: The URL of an image of the business.
+  street_address: Street number, street name, and unit number (if applicable).
+  city: City.
+  state: State or province. (e.g. CA)
+  postal_code: Postal or zip code.
+  country: The 2-letter country code. (e.g. US)
+---
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="{{ page.business_name }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ page.image }}">
+<meta property="business:contact_data:street_address" content="{{ page.street_address }}">
+<meta property="business:contact_data:locality" content="{{ page.city }}">
+<meta property="business:contact_data:region" content="{{ page.state }}">
+<meta property="business:contact_data:postal_code" content="{{ page.postal_code }}">
+<meta property="business:contact_data:country_name" content="{{ page.country }}">

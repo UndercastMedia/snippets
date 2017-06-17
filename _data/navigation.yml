@@ -1,0 +1,41 @@
+- text: JSON-LD
+  url: /json-ld
+  sublinks:
+    - text: Articles
+      url: /articles
+    - text: Courses
+      url: /courses
+    - text: Local Businesses
+      url: /local-businesses
+    - text: Organization
+      url: /organization
+    - text: Products
+      url: /products
+    - text: Reviews
+      url: /reviews
+    - text: Videos
+      url: /videos
+    - text: Website
+      url: /website
+- text: Open Graph
+  url: /open-graph
+  sublinks:
+    - text: Article
+      url: /article
+    - text: Business
+      url: /business
+    - text: Place
+      url: /place
+    - text: Product
+      url: /product
+    - text: Video
+      url: /video
+- text: Twitter Card
+  url: /twitter-card
+  sublinks:
+    - text: App
+      url: /app
+    - text: Product
+      url: /product
+    - text: Summary
+      url: /summary

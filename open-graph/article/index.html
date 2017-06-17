@@ -1,0 +1,19 @@
+---
+title: Article
+description: This is an example of open graph mark up for an article using Jekyll.
+site_name: Executive Anvil
+article_title: Article Title
+image: placehold.it/800x800
+author: John Doe
+_comments:
+  site_name: The name of the site.
+  article_title: The title of the article.
+  image: The URL pointing to a representative image of the article.  
+  author: The author of the article.
+---
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.article_title }}">
+<meta property="og:site_name" content="{{ page.site_name }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ page.image }}">
+<meta property="article:author" content="{{ page.author }}">

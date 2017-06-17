@@ -1,0 +1,20 @@
+---
+title: Product
+description: This is an example of open graph mark up for a product using Jekyll.
+product_name: Executive Anvil
+product_image: placehold.it/750x750
+product_image: placehold.it/800x800
+currency: USD
+price: 24.99
+_comments:
+  product_name: The name of the product.
+  product_image: The URL of a product image.
+  currency: e.g. USD
+  price: e.g. 24.99
+---
+<meta property="og:type" content="product">
+<meta property="og:title" content="{{ page.product_name }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ page.product_image }}">
+<meta property="product:price:amount" content="{{ page.price }}">
+<meta property="product:price:currency" content="{{ page.currency }}">

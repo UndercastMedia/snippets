@@ -1,0 +1,26 @@
+---
+title: Videos
+description: This is an example of how to mark up video content using Jekyll to help users discover your videos on Google Search.
+video_title: Video Title
+video_description: Video description.
+thumbnail_image: placehold.it/1080x1920
+video_path: 'http://www.example.com/video123.flv'
+upload_date: 2017-06-20
+_comments:
+  video_title: The title of the video.
+  video_description: The description of the video.
+  thumbnail_image: A URL pointing to a video thumbnail image.
+  video_path: The date the video was first published. (YYYY-MM-DD)
+  upload_date: A URL pointing to the video file.
+---
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ page.video_title }}",
+  "description": "{{ page.video_description }}",
+  "thumbnailUrl": "{{ page.thumbnail_image }}",
+  "uploadDate": "{{ page.upload_date }}T00:00:00+00:00",
+  "contentUrl": "{{ page.video_path }}"
+}
+</script>

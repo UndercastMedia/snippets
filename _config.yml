@@ -1,0 +1,44 @@
+url: https://snippets.undercastmedia.com
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: 'default'
+  - scope:
+      path: 'json-ld'
+    values:
+      layout: 'json-ld'
+
+compress_html:
+  clippings: all
+  comments: ['<!-- ', ' -->']
+  blanklines: true
+  profile: false
+  startings: [html, head, body]
+  
+offline:
+  strategy: cache-first-network-fallback
+
+product_number_types:
+  - SKU
+  - MPN
+  - GTIN8
+  - GTIN13
+  - GTIN14
+
+conditions:
+  - New
+  - Used
+  - Refurbished
+
+availabilities:
+  - Discontinued
+  - InStock
+  - InStoreOnly
+  - LimitedAvailability
+  - OnlineOnly
+  - OutOfStock
+  - PreOrder
+  - PreSale
+  - SoldOut

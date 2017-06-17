@@ -1,0 +1,24 @@
+---
+title: Reviews
+description: This is an example of how to mark up reviews using Jekyll so that Google can display rich snippets.
+product_name: Executive Anvil
+average_rating: 4.4
+number_of_reviews: 89
+_comments:
+  product_name: The name of the product.
+  average_rating: e.g. 4.4
+  number_of_reviews: Total number of product reviews.
+---
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "{{ page.product_name }}",
+  "aggregateRating":
+  {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ page.average_rating }}",
+    "reviewCount": "{{ page.number_of_reviews }}"
+  }
+}
+</script>

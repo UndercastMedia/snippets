@@ -1,0 +1,56 @@
+---
+title: Products
+description: This is an example of how to mark up a product page using Jekyll so that Google can display rich snippets.
+brand_name: ACME
+product_name: Executive Anvil
+product_image: placehold.it/750x750
+product_description: "Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height."
+product_number_type: SKU
+product_number: 123
+average_rating: 4.4
+number_of_reviews: 89
+currency: USD
+price: 24.99
+condition: New
+availability: InStock
+_comments:
+  brand_name: The brand of the product.
+  product_name: The name of the product.
+  product_image: The URL of a product image.
+  product_description: Product description.
+  product_number_type: e.g. SKU
+  product_number: Unique product number.
+  average_rating: e.g. 4.4
+  number_of_reviews: Total number of product reviews.
+  currency: e.g. USD
+  price: e.g. 24.99
+  condition: e.g. New
+  availability: e.g. InStock
+---
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{ page.product_name }}",
+  "image": "{{ page.product_image }}",
+  "description": "{{ page.product_description }}",
+  "{{ page.product_number_type }}": "{{ page.product_number}}",
+  "brand": {
+    "@type": "Thing",
+    "name": "{{ page.brand_name }}"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ page.average_rating }}",
+    "reviewCount": "{{ page.number_of_reviews }}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "{{ page.currency }}",
+    "price": "{{ page.price }}",
+    "itemCondition": "http://schema.org/{{ page.condition }}Condition",
+    "availability": "http://schema.org/{{ page.availability }}",
+    "url": "{{ site.url }}{{ page.url }}"
+  }
+}
+</script>

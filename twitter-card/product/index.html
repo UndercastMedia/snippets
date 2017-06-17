@@ -1,0 +1,30 @@
+---
+title: Product
+description: This is an example of markup for Product Twitter Cards using Jekyll.
+twitter: Example
+product_name: Product Name
+product_description: Product description.
+product_image: placehold.it/750x750
+label_1: Price
+data_1: 24.99
+label_2: Availability
+data_2: In Stock
+_comments:
+  twitter: Site twitter handle.
+  product_name: Up to 70 characters.
+  product_description: Up to 200 characters.
+  product_image: A URL pointing to an image of the product.
+  label_1: e.g. Price, Items In Stock, etc.
+  data_1: e.g. 24.99, 10, etc.
+  label_2: e.g. Genre, Location, etc.
+  data_2: e.g. Rock, Sioux Falls, etc.
+---
+<meta name="twitter:card" content="product">
+<meta name="twitter:site" content="@{{ page.twitter }}">
+<meta name="twitter:title" content="{{ page.product_name }}">
+<meta name="twitter:description" content="{{ page.product_description }}">
+<meta name="twitter:image" content="{{ page.product_image }}">
+<meta name="twitter:label1" content="{{ page.label_1 }}">
+<meta name="twitter:data1" content="{{ page.data_1 }}">
+<meta name="twitter:label2" content="{{ page.label_2 }}">
+<meta name="twitter:data2" content="{{ page.data_2 }}">

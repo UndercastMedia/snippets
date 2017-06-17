@@ -1,0 +1,26 @@
+---
+title: App
+description: This is an example of markup for App Twitter Cards using Jekyll.
+twitter: Example
+app_name: The Best App
+app_description: App description.
+iphone_app_id: 307234931
+ipad_app_id: 307234931
+google_play_app_id: com.android.app
+_comments:
+  twitter: Site twitter handle.
+  app_name: The name of the app.
+  app_description: Up to 200 characters.
+  iphone_app_id: e.g. 307234931
+  ipad_app_id: e.g. 307234931
+  google_play_app_id: e.g. com.android.app
+---
+<meta name="twitter:card" content="app">
+<meta name="twitter:site" content="@{{ page.twitter }}">
+<meta name="twitter:description" content="{{ page.app_description }}">
+<meta name="twitter:app:name:iphone" content="{{ page.app_name }}">
+<meta name="twitter:app:id:iphone" content="{{ page.iphone_app_id }}">
+<meta name="twitter:app:name:ipad" content="{{ page.app_name }}">
+<meta name="twitter:app:id:ipad" content="{{ page.ipad_app_id }}">
+<meta name="twitter:app:name:googleplay" content="{{ page.app_name }}">
+<meta name="twitter:app:id:googleplay" content="{{ page.google_play_app_id }}">

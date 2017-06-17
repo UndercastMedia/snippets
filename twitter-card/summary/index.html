@@ -1,0 +1,18 @@
+---
+title: Summary
+description: This is an example of markup for Summary Twitter Cards using Jekyll.
+twitter: Example
+summary_headline: Breaking News
+summary_description: We have exciting news.
+summary_image: placehold.it/750x750
+_comments:
+  twitter: Site twitter handle.
+  summary_headline: Up to 70 characters.
+  summary_description: Up to 200 characters.
+  summary_image: A URL pointing to an image related to the page.
+---
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ page.twitter }}">
+<meta name="twitter:title" content="{{ page.summary_headline }}">
+<meta name="twitter:description" content="{{ page.summary_description }}">
+<meta name="twitter:image" content="{{ page.summary_image }}">

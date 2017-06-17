@@ -1,0 +1,19 @@
+---
+title: Place
+description: This is an example of open graph mark up for a place using Jekyll.
+business_name: Executive Anvil
+image: placehold.it/800x800
+latitude: 37.3952149
+longitude: -121.9474023
+_comments:
+  business_name: Business name.
+  image: The URL of an image of the business.
+  latitude: The latitude of the business location.
+  longitude: The longitude of the business location.
+---
+<meta property="og:type" content="place">
+<meta property="og:title" content="{{ page.business_name }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ page.image }}">
+<meta property="place:location:latitude" content="{{ page.latitude }}">
+<meta property="place:location:longitude" content="{{ page.longitude }}">

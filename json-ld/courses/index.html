@@ -1,0 +1,23 @@
+---
+title: Courses
+description: This is an example of how to markup your course lists using Jekyll so prospective students find you through Google Search.
+course_name: Introduction to Computer Science and Programming
+course_description: Introductory CS course laying out the basics.
+provider_name: University of Technology - Eureka
+_comments:
+  course_name: The title of the course.
+  course_description: A description of the course. Display limit of 60 characters.
+  provider_name: The organization that publishes the source content of the course.
+---
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "name": "{{ page.course_name }}",
+  "description": "{{ page.course_description }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ page.provider_name }}"
+  }
+}
+</script>

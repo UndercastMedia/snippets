@@ -1,0 +1,15 @@
+---
+title: WebSite
+description: This is an example of how to mark up a website using Jekyll.
+website_name: Executive Anvils
+_comments:
+  website_name: The name of the website.
+---
+<script type='application/ld+json'>
+{
+  "@context": "http://www.schema.org",
+  "@type": "WebSite",
+  "name": "{{ page.website_name }}",
+  "url": "{{ site.url }}"
+}
+</script>

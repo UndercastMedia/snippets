@@ -1,0 +1,13 @@
+---
+title: Video
+description: This is an example of open graph mark up for a video using Jekyll.
+video_title: Amazing Video
+thumbnail_image: placehold.it/1920x1080
+_comments:
+  video_title: The title of the video.
+  thumbnail_image: The URL pointing to the thumbnail image of the video.
+---
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="{{ page.video_title }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ page.thumbnail_image }}">

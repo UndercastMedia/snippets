@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{% for nav in site.data.navigation %}
+  {% if nav.url  == page.permalink %}
+    {% for sublink in nav.sublinks %}
+      <h2><a href="{{ page.url }}{{ sublink.url }}">{{ sublink.text }}</a></h2>
+    {% endfor %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,49 @@
+---
+title: Local Businesses
+description: This is an example of how to markup a local business using Jekyll so that Google can display details about a business that matched the query.
+business_name: The Best Store
+image: placehold.it/750x750
+street_address: 3986 Rivermark Pkwy
+city: Santa Clara
+state: CA
+postal_code: 95054
+country: US
+latitude: 37.3952149
+longitude: -121.9474023
+telephone: +14085551135
+_comments:
+  business_name: Business name.
+  image: The URL of an image of the business.
+  street_address: Street number, street name, and unit number (if applicable).
+  city: City.
+  state: State or province. (e.g. CA)
+  postal_code: Postal or zip code.
+  country: The 2-letter country code. (e.g. US)
+  latitude: The latitude of the business location. The precision should be at least 5 decimal places.
+  longitude: The longitude of the business location. The precision should be at least 5 decimal places.
+  telephone: Be sure to include the country code and area code in the phone number. (e.g. +14085551135)
+---
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site.url }}",
+  "image": "{{ page.image }}",
+  "name": "{{ page.business_name }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ page.stree_address }}",
+    "addressLocality": "{{ page.city }}",
+    "addressRegion": "{{ page.state }}",
+    "postalCode": "{{ page.postal_code }}",
+    "addressCountry": "{{ page.country }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ page.latitude }},
+    "longitude": {{ page.longitude }}
+  },
+  "url": "{{ site.url }}",
+  "telephone": "{{ page.telephone }}"
+}
+</script>
