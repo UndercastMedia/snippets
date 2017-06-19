@@ -18,7 +18,7 @@ compress_html:
   startings: [html, head, body]
   
 offline:
-  strategy: cache-first-network-fallback
+  strategy: network-first-cache-fallback
 
 product_number_types:
   - SKU
